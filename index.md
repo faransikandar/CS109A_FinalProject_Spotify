@@ -1,6 +1,10 @@
 ---
-title: The Case of the Italian Olives
+title: Spotify - CS109A Final Project - Group 14
 ---
+
+# Spotify - CS109A Final Project - Group 14
+
+## By David Costigan, Layla O'Kane and Faran Sikandar
 
 This is the home page
 

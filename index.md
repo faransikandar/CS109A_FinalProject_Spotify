@@ -1,9 +1,6 @@
 ---
-title: Home
-nav_include: 0
+title: Spotify - CS109A Final Project - Group 14
 ---
-
-# Spotify - CS109A Final Project - Group 14
 
 ## By David Costigan, Layla O'Kane and Faran Sikandar
 

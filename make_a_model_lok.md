@@ -1,6 +1,7 @@
 ---
 title: Plot CV scores
 notebook: make_a_model_lok.ipynb
+nav_include: 3
 ---
 
 ## Contents

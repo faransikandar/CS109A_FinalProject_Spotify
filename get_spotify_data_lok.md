@@ -1,6 +1,7 @@
 ---
 title: Draw the heatmap with the mask and correct aspect ratio
 notebook: get_spotify_data_lok.ipynb
+nav_include: 1
 ---
 
 ## Contents

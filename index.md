@@ -1,5 +1,6 @@
 ---
-title: Spotify - CS109A Final Project - Group 14
+title: Home
+nav_include: 0
 ---
 
 # Spotify - CS109A Final Project - Group 14

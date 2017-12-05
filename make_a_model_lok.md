@@ -1,5 +1,5 @@
 ---
-title: Plot CV scores
+title: Models
 notebook: make_a_model_lok.ipynb
 nav_include: 3
 ---

@@ -48,29 +48,29 @@ Our next step was to use our model to predict a highly-followed playlist. To do 
 
 <ol type="1" style="font-weight: bold">
   <li>Baseline models:</li>
-    <ol type="A">
+    <ol type="A" style="font-weight: normal">
       <li>Regression: OLS with all engineered features included</li>
       <li>Classification: Logistic with all features</li>        
     </ol>
   <li>Feature selection: </li>
-    <ol type="A">
+    <ol type="A" style="font-weight: normal">
       <li>Engineered summary stats of song-level data at the playlist level</li>
       <li>Tried feature selection using random forest – did not seem to help</li>
       <li>Tried feature selection for regression model using Lasso – this is what we ended up with. We used these features for all regression models and then logistic model for classification.</li>
       <li>Included all features for tree models since they have their own feature selection process</li>
     </ol>
   <li>Additional models to run after feature selection/using feature selection:</li>
-    <ol type="A">
+    <ol type="A" style="font-weight: normal">
       <li>Regression: Lasso, Ridge with CV</li>
       <li>Classification: Decision Tree, Random Forest, Ada Boost</li>
     </ol>
   <li>Pick best of the above:</li>
-    <ol type="A">
+    <ol type="A" style="font-weight: normal">
       <li>Regression: Lasso</li>
       <li>Classification: Random Forest/Ada Boost?</li>
     </ol>
   <li>Generate playlists of songs within category:</li>
-  <ol type="A">
+  <ol type="A" style="font-weight: normal">
     <li>Categorized songs based on mode category, random if equal</li>
     <li>Generated playlists</li>
   </ol>

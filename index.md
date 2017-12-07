@@ -18,13 +18,17 @@ We are working to understand how Spotify generates commercial success through it
 We started by gathering playlist information for all of Spotify’s “official” playlists; these are playlists created by Spotify itself. Our final data set contains 694 playlists. Each of these playlists has an associated category (e.g., “pop” or “blues”; there are 33 unique categories in our dataset), and each playlist has a different number of songs (ranging from short playlists of 12 tracks to significantly longer playlists with 400 tracks). The 694 playlists in our dataset together contain 39,134 unique tracks. For each of these tracks, we retrieved popularity and acoustic information from Spotify’s API and, when available, also pulled additional popularity characteristics from the Million Songs Database. We aggregated this information to the playlist level.
 
 Our preliminary EDA shows that the distribution of the number of followers of a playlist is very skewed: few playlists have an extremely high number of followers, while many more have a medium to low number of followers.
+
 <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/histogram.png" />
 <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/boxplot.png" />
 
 To handle this, we chose to re-define our dependent variable (number of followers) in two ways: (a) for our regression models, we took the natural log of the number of followers and (b) for our classification models, we used quantiles of the number of followers. We also did this by category, since our EDA showed that there were differences by category:
 
-<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png" />
-<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/pop_by_cat.png" />
+**Histogram**|**Boxplot**
+:-----:|:-----:
+Test|Test
+
+<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png" /> | <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/pop_by_cat.png" />
 
 Our EDA also showed that specific features were highly correlated with number of followers, namely, the popularity of individual songs on the playlist, mean danceability, and whether or not the playlist was featured. 
 

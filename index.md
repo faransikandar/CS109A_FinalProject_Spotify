@@ -26,7 +26,7 @@ To handle this, we chose to re-define our dependent variable (number of follower
 
 **Histogram**|**Boxplot**
 :-----:|:-----:
-![Histogram](https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png?raw=true") | ![Boxplot](https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/pop_by_cat.png?raw=true")
+![Histogram](https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png?raw=true" width="200") | ![Boxplot](https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/pop_by_cat.png?raw=true" width="200")
 
 <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png" /> | <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/pop_by_cat.png" />
 

@@ -28,7 +28,7 @@ In our work on this project, we have consulted the following resources:
 
 - “Spotify Web API - Spotify Developer.” Accessed December 5, 2017. https://developer.spotify.com/web-api/.
 - “Welcome to Spotipy! — Spotipy 2.0 Documentation.” Accessed December 5, 2017. http://spotipy.readthedocs.io/en/latest/.
-- “Million Song Dataset | Scaling MIR Research.” Accessed December 5, 2017. https://labrosa.ee.columbia.edu/millionsong/.
+- “Million Song Dataset - Scaling MIR Research.” Accessed December 5, 2017. https://labrosa.ee.columbia.edu/millionsong/.
 - “MusicBrainz - The Open Music Encyclopedia.” Accessed December 5, 2017. https://musicbrainz.org/.
 - “AcousticBrainz.” Accessed December 5, 2017. https://acousticbrainz.org/.
 - Lamere, Paul. Spotipy: A Light Weight Python Library for the Spotify Web API. Python, 2017. https://github.com/plamere/spotipy.

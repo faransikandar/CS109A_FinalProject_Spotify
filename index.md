@@ -46,7 +46,7 @@ We additionally modeled the number of followers by category using a classificati
 
 Our next step was to use our model to predict a highly-followed playlist. To do this, we used our final regression model and verified that our predicted playlist was also in the top quantile of followers using our final classification model. In order to generate the playlist, we classified song based on their modal category and then only selected songs from within a category for each generated playlist. We generated 10,000 playlist to choose from and used all of the songs available from the Spotify data. Our best playlist was a dance/party playlist.
 
-<ol type="1" style="font-weight: bold;">
+<ol type="1" style="font-weight: bold">
   <li>Baseline models:</li>
     <ol type="A">
       <li>Regression: OLS with all engineered features included</li>

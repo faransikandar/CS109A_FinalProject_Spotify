@@ -1,13 +1,13 @@
 ---
-title: Regression Models + The Best Playlist!
+title: Fit our model on our synthetic playlists, find the max predicted # of followers
 notebook: Regression_Models_and_Playlist_Prediction.ipynb
-nav_include: 4
 ---
 
 ## Contents
 {:.no_toc}
 *  
 {: toc}
+
 
 
 
@@ -39,6 +39,7 @@ import collections
 ```
 
 
+## Data Imputation and Dummy Creation
 
 
 
@@ -260,6 +261,7 @@ train.head()
 
 
 
+## Modify Number of Followers
 
 
 
@@ -272,6 +274,7 @@ to_x_test = test[[x for x in test.columns if x != 'num_followers']]
 ```
 
 
+## Standardize
 
 
 
@@ -307,6 +310,7 @@ x_test_const = sm.tools.add_constant(x_test_std3, has_constant = 'add')
 ```
 
 
+## Refine Feature Selection
 
 
 
@@ -330,6 +334,7 @@ x_test = x_test_const.drop(to_drop, axis=1)
 ```
 
 
+## Baseline Model
 
 
 
@@ -352,7 +357,8 @@ print('Test R^2: ', r2_score(y_test, ols_test_preds))
     Test R^2:  0.303403795346
 
 
-## LASSO
+## Additional Models
+### LASSO
 
 
 
@@ -386,14 +392,14 @@ plt.show()
 
 
 
-![png](Regression_Models_and_Playlist_Prediction_files/Regression_Models_and_Playlist_Prediction_13_1.png)
+![png](Regression_Models_and_Playlist_Prediction_files/Regression_Models_and_Playlist_Prediction_14_1.png)
 
 
 
-![png](Regression_Models_and_Playlist_Prediction_files/Regression_Models_and_Playlist_Prediction_13_2.png)
+![png](Regression_Models_and_Playlist_Prediction_files/Regression_Models_and_Playlist_Prediction_14_2.png)
 
 
-## Ridge
+### Ridge
 
 
 
@@ -413,6 +419,7 @@ print("Test R2", ridge_fitted.score(x_test, y_test))
     Test R2 0.31182299033
 
 
+## Playlist Prediction
 
 
 
@@ -480,7 +487,7 @@ print('Category of theoretical best playlist: '+candidate_playlists.loc[best_pla
     Category of theoretical best playlist: party
 
 
-## Best Playlist Components
+### Best Playlist Components
 
 
 
@@ -529,6 +536,7 @@ def spotify_id_to_track_name(spotify_ids):
 ```
 
 
+## Drumroll: The Best Playlist!
 
 
 

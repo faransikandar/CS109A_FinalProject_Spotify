@@ -1,13 +1,13 @@
 ---
-title: Classification Models
+title: Random Forest with CV to pick max depth and number of trees
 notebook: Classification_Models.ipynb
-nav_include: 3
 ---
 
 ## Contents
 {:.no_toc}
 *  
 {: toc}
+
 
 
 
@@ -35,6 +35,7 @@ import collections
 ```
 
 
+## Data Imputation and Dummy Creation
 
 
 
@@ -258,6 +259,7 @@ train.head()
 
 
 
+## Create Classification Quintiles
 
 
 
@@ -279,6 +281,7 @@ y_test_class_by_cat = raw_data.groupby('category')['num_followers'].apply(lambda
 ```
 
 
+## Standardize
 
 
 
@@ -325,6 +328,7 @@ def calculate_cr(classifications, y):
 ```
 
 
+## Baseline Model
 
 
 
@@ -359,7 +363,8 @@ print("\tTest CR:", str(calculate_cr(logistic_classifications_test_ovr, y_test_c
     	Test CR: 0.363888888889
 
 
-## Decision Tree
+## Additional Models - Across Categories
+### Decision Tree
 
 
 
@@ -380,7 +385,7 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class)*
     Test Accuracy: 34.72%
 
 
-## Random Forest
+### Random Forest
 
 
 
@@ -418,10 +423,10 @@ feature_importance.sort_values(ascending = False).head(10).sort_values(ascending
 
 
 
-![png](Classification_Models_files/Classification_Models_15_1.png)
+![png](Classification_Models_files/Classification_Models_16_1.png)
 
 
-## AdaBoosted Decision Trees
+### AdaBoosted Decision Trees
 
 
 
@@ -463,10 +468,11 @@ feature_importance.sort_values(ascending = False).head(10).sort_values(ascending
 
 
 
-![png](Classification_Models_files/Classification_Models_18_1.png)
+![png](Classification_Models_files/Classification_Models_19_1.png)
 
 
-## Decision Tree
+## Classification Within Categories
+### Decision Tree
 
 
 
@@ -485,7 +491,7 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class_b
     Test Accuracy: 46.94%
 
 
-## Random Forest
+### Random Forest
 
 
 
@@ -507,7 +513,7 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class_b
     Test Accuracy: 45.27%
 
 
-## AdaBoosted Decision Tree
+### AdaBoosted Decision Tree
 
 
 

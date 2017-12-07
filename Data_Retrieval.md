@@ -1,13 +1,13 @@
 ---
-title: Data Retrieval
+title: store fake playlists
 notebook: Data_Retrieval.ipynb
-nav_include: 1
 ---
 
 ## Contents
 {:.no_toc}
 *  
 {: toc}
+
 
 
 
@@ -28,6 +28,7 @@ import json
 ```
 
 
+## Get Spotify Data
 
 
 
@@ -309,6 +310,7 @@ for cat, playlists in playlist_ids_by_cat.items():
 ```
 
 
+## Merge Million Songs Database
 
 
 

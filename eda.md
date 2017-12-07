@@ -1,13 +1,13 @@
 ---
-title: EDA
+title: but they are not the same metric (so both could theoretically have predictive power)
 notebook: EDA.ipynb
-nav_include: 2
 ---
 
 ## Contents
 {:.no_toc}
 *  
 {: toc}
+
 
 
 
@@ -26,6 +26,7 @@ plt.style.use('seaborn')
 ```
 
 
+## Spotify API Data
 
 
 
@@ -48,7 +49,7 @@ avgs = train.groupby('category').mean()
 ```
 
 
-## What Playlist categories tend to have the most followers?
+### What Playlist categories tend to have the most followers?
 
 
 
@@ -70,10 +71,10 @@ len(set(data['category'].values))
 
 
 
-![png](EDA_files/EDA_4_1.png)
+![png](EDA_files/EDA_5_1.png)
 
 
-## What does the distribution of the number of followers look like?
+### What does the distribution of the number of followers look like?
 
 
 
@@ -97,14 +98,14 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_6_0.png)
+![png](EDA_files/EDA_7_0.png)
 
 
 
-![png](EDA_files/EDA_6_1.png)
+![png](EDA_files/EDA_7_1.png)
 
 
-## Which categories tend to have the most popular songs?
+### Which categories tend to have the most popular songs?
 
 
 
@@ -129,10 +130,10 @@ plt.title('Average Popularity of Songs by Spotify Playlist Category', fontsize =
 
 
 
-![png](EDA_files/EDA_8_1.png)
+![png](EDA_files/EDA_9_1.png)
 
 
-## How are our quantitative variables correlated?
+### How are our quantitative variables correlated?
 
 
 
@@ -163,10 +164,11 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_10_0.png)
+![png](EDA_files/EDA_11_0.png)
 
 
-## Artist Familiarity
+## Million Songs Data
+### Artist Familiarity
 
 
 
@@ -181,10 +183,10 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_12_0.png)
+![png](EDA_files/EDA_13_0.png)
 
 
-## Artist Hotttnesss
+### Artist Hotttnesss
 
 
 
@@ -199,10 +201,10 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_14_0.png)
+![png](EDA_files/EDA_15_0.png)
 
 
-## Song Hotttnesss
+### Song Hotttnesss
 
 
 
@@ -217,10 +219,10 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_16_0.png)
+![png](EDA_files/EDA_17_0.png)
 
 
-## Song Popularity Compared to Hotttnesss
+### Song Popularity Compared to Hotttnesss
 
 
 
@@ -234,7 +236,7 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_18_0.png)
+![png](EDA_files/EDA_19_0.png)
 
 
 

@@ -26,8 +26,6 @@ To handle this, we chose to re-define our dependent variable (number of follower
 
 **Histogram**|**Boxplot**
 :-----:|:-----:
-Test|Test
-
 <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png" /> | <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/pop_by_cat.png" />
 
 Our EDA also showed that specific features were highly correlated with number of followers, namely, the popularity of individual songs on the playlist, mean danceability, and whether or not the playlist was featured. 

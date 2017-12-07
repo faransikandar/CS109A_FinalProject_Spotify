@@ -18,7 +18,7 @@ $$ G_{\mu\nu} + \Lambda g_{\mu\nu}  = 8 \pi T_{\mu\nu} . $$
 
 ![alt text](https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png "Logo Title Text 1")
 
-![Group 14](https://raw.githubusercontent.com/fsikandar.github.io/CS109A_FinalProject_Spotify/images/Group14.png "Group 14 Caption")
+![Group 14](//raw.githubusercontent.com/fsikandar.github.io/CS109A_FinalProject_Spotify/images/Group14.png "Group 14 Caption")
 
 //raw.githubusercontent.com/ValaParthvi/valaparthvi.github.io/master/DSC_07321.resized.png
 

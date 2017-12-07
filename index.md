@@ -4,6 +4,8 @@ title: Spotify - CS109A Final Project - Group 14
 
 ## By David Costigan, Layla O'Kane and Faran Sikandar
 
+<img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="100" />
+
 ## 1. Problem Statement and Motivation:
 
 The project goal is to assess what features of a playlist on Spotify are good predictors of the number of followers of that playlist. We model this using both regression and classification methods, and using both playlist and song-level data. We then use the results to generate what is likely to be a successful playlist. This project will help inform Spotify about its users’ preferences for playlists, enabling it to create more successful playlists.
@@ -92,7 +94,5 @@ Here is some inline math $\alpha = \frac{\beta}{\gamma}$ and, of-course, E rules
 $$ G_{\mu\nu} + \Lambda g_{\mu\nu}  = 8 \pi T_{\mu\nu} . $$
 
 ![alt text](https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png "Spotify Hover")
-
-<img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="50" />
 
 ![Group 14](https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/Group14.png?raw=true")

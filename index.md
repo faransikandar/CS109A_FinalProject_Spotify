@@ -16,9 +16,5 @@ Here is some inline math $\alpha = \frac{\beta}{\gamma}$ and, of-course, E rules
 
 $$ G_{\mu\nu} + \Lambda g_{\mu\nu}  = 8 \pi T_{\mu\nu} . $$
 
-![alt text][group14]
-
-[group14] https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/Group14.png "Logo Title Text 1 - Group 14!"
-
 ![alt text](https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/Group14.png "Logo Title Text 1")
 

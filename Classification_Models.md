@@ -1,6 +1,7 @@
 ---
-title: Random Forest with CV to pick max depth and number of trees
+title: Classification Models
 notebook: Classification_Models.ipynb
+nav_include: 3
 ---
 
 ## Contents

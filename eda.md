@@ -1,7 +1,6 @@
 ---
-title: EDA
+title: but they are not the same metric (so both could theoretically have predictive power)
 notebook: EDA.ipynb
-nav_include: 2
 ---
 
 ## Contents

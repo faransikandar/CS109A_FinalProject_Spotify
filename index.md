@@ -2,9 +2,9 @@
 title: Spotify - CS109A Final Project - Group 14
 ---
 
-<img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="100" />
 ## By David Costigan, Layla O'Kane and Faran Sikandar
 
+<img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="100" />
 
 ## 1. Problem Statement and Motivation:
 

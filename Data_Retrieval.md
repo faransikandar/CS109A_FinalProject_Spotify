@@ -1,6 +1,7 @@
 ---
-title: store fake playlists
+title: Data Retrieval
 notebook: Data_Retrieval.ipynb
+nav_include: 1
 ---
 
 ## Contents

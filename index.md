@@ -91,6 +91,8 @@ Here is some inline math $\alpha = \frac{\beta}{\gamma}$ and, of-course, E rules
 
 $$ G_{\mu\nu} + \Lambda g_{\mu\nu}  = 8 \pi T_{\mu\nu} . $$
 
-![alt text](https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png =100x50)
+![alt text](https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png "Spotify Hover")
+
+<img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="50" />
 
 ![Group 14](https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/Group14.png?raw=true")

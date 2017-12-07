@@ -4,14 +4,12 @@ title: Spotify - CS109A Final Project - Group 14
 
 ## By David Costigan, Layla O'Kane and Faran Sikandar
 
-## 1. Problem Statement and Motivation: This should be brief and self-contained.
+## 1. Problem Statement and Motivation:
 
 The project goal is to assess what features of a playlist on Spotify are good predictors of the number of followers of that playlist. We model this using both regression and classification methods, and using both playlist and song-level data. We then use the results to generate what is likely to be a successful playlist. This project will help inform Spotify about its users’ preferences for playlists, enabling it to create more successful playlists.
 
 
-## 2. Introduction and Description of Data: Description of relevant knowledge. Why is this
-problem important? Why is it challenging? Introduce the motivations for the project
-question and how that question was defined through preliminary EDA.
+## 2. Introduction and Description of Data:
 
 We are working to understand how Spotify generates commercial success through its use of licensed music, and more specifically its playlists. This contributes to an understanding of how Spotify's digital rights management and its "freemium" business model has led to business success and profitability. Spotify and other similar streaming services have raised questions of how intellectual property rights affect innovation in the age rapid improvements in digital technology. This project contributes to the literature on these issues.
 
@@ -37,7 +35,6 @@ In our work on this project, we have consulted the following resources:
 - Spotify Capstone GitHub. Jupyter Notebook. 2017. Reprint, spotify-iacs, 2017. https://github.com/spotify-iacs/capstone.
 
 ## 4. Modeling Approach and Project Trajectory: 
-Include 1) a baseline model for comparison and 2) a description of your implementations beyond the baseline model. Briefly summarize any changes in your project goals or implementation plans you have made along the way. These changes are a natural part of any project, even those that seem the most straightforward at the beginning. The story you tell about how you arrived at your results can powerfully illustrate your process.
 
 The first step we took in our modeling approach was to build baseline models for both regression and classification. For regression, we used a simple OLS model with all features included, and for classification we used a logistic multinomial model with all features included. The features we included were data at the playlist level, and engineered summary statistics of song-level data, including the minimum, median, maximum, mean, and standard deviation of characteristics such as accousticness, danceability, and popularity. We chose to include these features since our EDA showed they were relevant to number of playlist followers.
 
@@ -49,38 +46,37 @@ We additionally modeled the number of followers by category using a classificati
 
 Our next step was to use our model to predict a highly-followed playlist. To do this, we used our final regression model and verified that our predicted playlist was also in the top quantile of followers using our final classification model. In order to generate the playlist, we classified song based on their modal category and then only selected songs from within a category for each generated playlist. We generated 10,000 playlist to choose from and used all of the songs available from the Spotify data. Our best playlist was a dance/party playlist.
 
-<ol>
+<ol type="1">
   <li>Baseline models:</li>
-    <ol type="a">
+    <ol type="A">
       <li>Regression: OLS with all engineered features included</li>
       <li>Classification: Logistic with all features</li>        
     </ol>
-    
-  <li>Feature Selection: </li>
-  </li>
-  <li>Milk</li>
+  <li>Feature selection: </li>
+    <ol type="A">
+      <li>Engineered summary stats of song-level data at the playlist level</li>
+      <li>Tried feature selection using random forest – did not seem to help</li>
+      <li>Tried feature selection for regression model using Lasso – this is what we ended up with. We used these features for all regression models and then logistic model for classification.</li>
+      <li>Included all features for tree models since they have their own feature selection process</li>
+    </ol>
+  <li>Additional models to run after feature selection/using feature selection:</li>
+    <ol type="A">
+      <li>Regression: Lasso, Ridge with CV</li>
+      <li>Classification: Decision Tree, Random Forest, Ada Boost</li>
+    </ol>
+  <li>Pick best of the above:</li>
+    <ol type="A">
+      <li>Regression: Lasso</li>
+      <li>Classification: Random Forest/Ada Boost?</li>
+    </ol>
+  <li>Generate playlists of songs within category:</li>
+  <ol type="A">
+    <li>Categorized songs based on mode category, random if equal</li>
+    <li>Generated playlists</li>
+  </ol>
 </ol>
 
-1.	Baseline models:
-    
-2.	Feature Selection
-    a.	Engineered summary stats of song-level data at the playlist level
-    b.	Tried feature selection using random forest – did not seem to help
-    c.	Tried feature selection for regression model using Lasso – this is what we ended up with. We used these features for    all regression models and then logistic model for classification
-    d.	Included all features for tree models since they have their own feature selection process
-3.	Additional models to run after feature selection/using feature selection
-    a.	Regression: Lasso, Ridge with CV
-    b.	Classification: Decision Tree, Random Forest, Ada Boost
-4.	Pick best of the above
-    a.	Regression: Lasso
-    b.	Classification: Random Forest/Ada Boost?
-5.	Generate playlists of songs within category
-    a.	Categorized songs based on mode category, random if equal
-    b.	Generated playlists
-
 ## 5. Results, Conclusions, and Future Work: Show and interpret your results. 
-Summarize your results, the strengths and short-comings of your results, and speculate on how you might
-address these short-comings if given more time.
 
 Our most important conclusion is that The Ketchup Song is on the best predicted playlist generated by our model. Some may think that a playlist of only The Ketchup Song would be ideal. Those people would not be incorrect.
 

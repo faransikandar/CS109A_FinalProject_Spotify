@@ -1,7 +1,6 @@
 ---
-title: Classification Models
+title: Random Forest with CV to pick max depth and number of trees
 notebook: Classification_Models.ipynb
-nav_include: 4
 ---
 
 ## Contents
@@ -37,9 +36,8 @@ import collections
 
 
 
-```python
-#DATA IMPUTATION AND DUMMY CREATION
 
+```python
 #Read in our cleaned, aggregated data
 plt.style.use('seaborn')
 with open('aggregate_data.p', 'rb') as f:
@@ -261,6 +259,7 @@ train.head()
 
 
 
+
 ```python
 #We split our dependent var into quantiles for classification. We chose to use quintiles.
 data['num_followers_quantile'] = pd.qcut(data['num_followers'], 5, labels=False)
@@ -277,6 +276,7 @@ y_train_class_by_cat = raw_data.groupby('category')['num_followers'].apply(lambd
 y_test_class_by_cat = raw_data.groupby('category')['num_followers'].apply(lambda x: pd.qcut(x, 3, labels = False)).loc[~msk]
 
 ```
+
 
 
 
@@ -326,6 +326,7 @@ def calculate_cr(classifications, y):
 
 
 
+
 ```python
 #Begin with logistic models as baseline
 #Multinomial Logistic
@@ -357,6 +358,8 @@ print("\tTest CR:", str(calculate_cr(logistic_classifications_test_ovr, y_test_c
     	Test CR: 0.363888888889
 
 
+## Decision Tree
+
 
 
 ```python
@@ -375,6 +378,8 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class)*
     Avg Cross-Validation Accuracy at Max: 33.53%
     Test Accuracy: 34.72%
 
+
+## Random Forest
 
 
 
@@ -412,13 +417,15 @@ feature_importance.sort_values(ascending = False).head(10).sort_values(ascending
 
 
 
-![png](Classification_Models_files/Classification_Models_9_1.png)
+![png](Classification_Models_files/Classification_Models_15_1.png)
 
+
+## AdaBoosted Decision Trees
 
 
 
 ```python
-#Ada Boost with CV to pick max depth and number of trees
+#AdaBoost with CV to pick max depth and number of trees
 learning_rate = .05
 
 param_grid = {'n_estimators' : [2**i for i in [1,2,3,4,5,6,7,8]],
@@ -455,8 +462,10 @@ feature_importance.sort_values(ascending = False).head(10).sort_values(ascending
 
 
 
-![png](Classification_Models_files/Classification_Models_11_1.png)
+![png](Classification_Models_files/Classification_Models_18_1.png)
 
+
+## Decision Tree
 
 
 
@@ -474,6 +483,8 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class_b
     Avg Cross-Validation Accuracy at Max: 46.10%
     Test Accuracy: 46.94%
 
+
+## Random Forest
 
 
 
@@ -494,6 +505,8 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class_b
     Avg Cross-Validation Accuracy at Max: 48.20%
     Test Accuracy: 45.27%
 
+
+## AdaBoosted Decision Tree
 
 
 

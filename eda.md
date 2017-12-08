@@ -1,7 +1,6 @@
 ---
-title: EDA
+title: Million Songs Data
 notebook: EDA.ipynb
-nav_include: 2
 ---
 
 ## Contents
@@ -30,6 +29,7 @@ plt.style.use('seaborn')
 
 
 ```python
+''' Load Data (see data retrieval notebook)'''
 with open('aggregate_data.p', 'rb') as f:
     data = pickle.load(f)
 
@@ -156,6 +156,7 @@ plt.show()
 
 
 ```python
+'''EDA of MSD Data -- these generally go in the correct direction + make sense given correlation data'''
 
 data.plot('artist_famil_mean', 'num_followers' ,kind = 'scatter')
 plt.xlabel('Average Artist Familiarity', fontsize = 20)
@@ -210,6 +211,8 @@ plt.show()
 
 
 ```python
+'''These are positively correlated, which makes sense, but not perfectly so; there is colinearity
+    but they are not the same metric (so both could theoretically have predictive power)'''
 data.plot('song_hot_mean', 'popularity_mean' ,kind = 'scatter')
 plt.xlabel('Average Song Hotttnesss', fontsize = 20)
 plt.ylabel('Average Song Popularity', fontsize = 20)

@@ -1,14 +1,12 @@
 ---
-title: Regression Models + The Best Playlist!
+title: Drumroll: The Best Playlist!
 notebook: Regression_Models_and_Playlist_Prediction.ipynb
-nav_include: 4
 ---
 
 ## Contents
 {:.no_toc}
 *  
 {: toc}
-
 
 
 
@@ -40,12 +38,15 @@ import collections
 ```
 
 
-## Data Imputation and Dummy Creation
+    C:\Users\dmcst\Anaconda2\envs\tensorflow\lib\site-packages\statsmodels\compat\pandas.py:56: FutureWarning: The pandas.core.datetools module is deprecated and will be removed in a future version. Please use the pandas.tseries module instead.
+      from pandas.core import datetools
+
+
 
 
 
 ```python
-#Read in our cleaned, aggregated data
+'''Read in our cleaned, aggregated data'''
 plt.style.use('seaborn')
 with open('aggregate_data.p', 'rb') as f:
     data = pickle.load(f)
@@ -86,6 +87,7 @@ test = data.loc[~msk, :]
 
 
 ```python
+''' Peek at data'''
 train.head()
 ```
 
@@ -262,12 +264,11 @@ train.head()
 
 
 
-## Modify Number of Followers
 
 
 
 ```python
-#Take the log of number of followers because of EDA that shows how quickly it increases
+'''Take the log of number of followers because of EDA that shows how quickly it increases'''
 to_y_train = np.log(train['num_followers'].astype(float))
 to_y_test = np.log(test['num_followers'].astype(float))
 to_x_train = train[[x for x in train.columns if x != 'num_followers']]
@@ -275,12 +276,11 @@ to_x_test = test[[x for x in test.columns if x != 'num_followers']]
 ```
 
 
-## Standardize
 
 
 
 ```python
-#Define continuous vars
+'''Define continuous vars'''
 continuous_variables = [x for x in to_x_train.columns if 'category' not in x and x != 'available_markets_max' and x != 'featured']
 non_continuous_variables = [x for x in to_x_train.columns if 'category' in x]
 
@@ -311,13 +311,12 @@ x_test_const = sm.tools.add_constant(x_test_std3, has_constant = 'add')
 ```
 
 
-## Refine Feature Selection
 
 
 
 ```python
-#Here we drop things with colinearity as well as some things
-#that don't make sense, e.g. the mean of the time signature of songs on the playlist
+'''Here we drop things with colinearity as well as some things
+that don't make sense, e.g. the mean of the time signature of songs on the playlist'''
 to_drop = ['acousticness_max',  'acousticness_median', 'acousticness_min', 'danceability_max',  'danceability_median', 'danceability_min', 
 'duration_ms_max',  'duration_ms_median', 'duration_ms_min', 'energy_max', 'energy_median', 'energy_min', 
 'instrumentalness_max', 'instrumentalness_median', 'instrumentalness_min', 'liveness_max',  'liveness_median', 
@@ -335,12 +334,11 @@ x_test = x_test_const.drop(to_drop, axis=1)
 ```
 
 
-## Baseline Model
 
 
 
 ```python
-#Baseline model: simple OLS
+'''Baseline model: simple OLS'''
 regression = OLS(y_train, x_train).fit()
 ols_train_preds = regression.predict(x_train)
 ols_test_preds = regression.predict(x_test)
@@ -358,13 +356,12 @@ print('Test R^2: ', r2_score(y_test, ols_test_preds))
     Test R^2:  0.303403795346
 
 
-## Additional Models
-### LASSO
+## LASSO
 
 
 
 ```python
-#LASSO
+'''LASSO'''
 lasso_model = LassoCV(alphas = [10**i for i in (-5,-4,-3,-2,-1,0,1,2,3,4,5)], fit_intercept = False, tol = 0.1)
 lasso_fitted = lasso_model.fit(x_train, y_train)
 print("Train R2", lasso_fitted.score(x_train, y_train))
@@ -393,19 +390,19 @@ plt.show()
 
 
 
-![png](Regression_Models_and_Playlist_Prediction_files/Regression_Models_and_Playlist_Prediction_14_1.png)
+![png](Regression_Models_and_Playlist_Prediction_files/Regression_Models_and_Playlist_Prediction_13_1.png)
 
 
 
-![png](Regression_Models_and_Playlist_Prediction_files/Regression_Models_and_Playlist_Prediction_14_2.png)
+![png](Regression_Models_and_Playlist_Prediction_files/Regression_Models_and_Playlist_Prediction_13_2.png)
 
 
-### Ridge
+## Ridge
 
 
 
 ```python
-#Ridge
+'''Ridge'''
 ridge_model = RidgeCV(alphas = [10**i for i in (-5,-4,-3,-2,-1,0,1,2,3,4,5)], fit_intercept = False)
 ridge_fitted = ridge_model.fit(x_train, y_train)
 print("Train R2", ridge_fitted.score(x_train, y_train))
@@ -420,7 +417,6 @@ print("Test R2", ridge_fitted.score(x_test, y_test))
     Test R2 0.31182299033
 
 
-## Playlist Prediction
 
 
 
@@ -463,7 +459,6 @@ x_candidate_playlists_std2 = x_candidate_playlists_std.join(x_candidate_playlist
 x_candidate_playlists_std3 = x_candidate_playlists_std2.join(x_candidate_playlists['featured'])
 
 x_candidate_playlists_const = sm.tools.add_constant(x_candidate_playlists_std3, has_constant = 'add')
-x_candidate_playlists_const['category_toplists'] = 0
 x_candidate_playlists = x_candidate_playlists_const.drop(to_drop, axis=1)
 ```
 
@@ -471,10 +466,11 @@ x_candidate_playlists = x_candidate_playlists_const.drop(to_drop, axis=1)
 
 
 ```python
+'''Fit our model on our synthetic playlists, find the max predicted # of followers'''
 standardized_log_predicted_followers = lasso_fitted.predict(x_candidate_playlists)
 predicted_followers = np.exp(unstandardize_data(standardized_log_predicted_followers, to_y_train))
 print('Predicted Max Followers: ' + str(predicted_followers.max()))
-print('Actual Followers in Best (Real) Spotify Playlist): ' + str(data['num_followers'].max()))
+print('Actual Followers in Best (Real) Spotify Playlist: ' + str(data['num_followers'].max()))
 best_playlist = predicted_followers.argmax()
 x_candidate_playlists.loc[best_playlist]
 best_songs = playlist_id_to_songs[best_playlist]
@@ -484,11 +480,11 @@ print('Category of theoretical best playlist: '+candidate_playlists.loc[best_pla
 
 
     Predicted Max Followers: 35738616192.8
-    Actual Followers in Best (Real) Spotify Playlist): 18233853.0
+    Actual Followers in Best (Real) Spotify Playlist: 18233853.0
     Category of theoretical best playlist: party
 
 
-### Best Playlist Components
+## Best Playlist Components
 
 
 
@@ -537,7 +533,6 @@ def spotify_id_to_track_name(spotify_ids):
 ```
 
 
-## Drumroll: The Best Playlist!
 
 
 

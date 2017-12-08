@@ -1,14 +1,12 @@
 ---
-title: Data Retrieval
+title: Merge Million Songs Database
 notebook: Data_Retrieval.ipynb
-nav_include: 1
 ---
 
 ## Contents
 {:.no_toc}
 *  
 {: toc}
-
 
 
 
@@ -29,7 +27,6 @@ import json
 ```
 
 
-## Get Spotify Data
 
 
 
@@ -72,6 +69,7 @@ sp = refresh()
 
 
 ```python
+'''Get all of the categories for Spotify official playlists'''
 categories = sp.categories(country=None, locale=None, limit=50, offset=0)
 
 #Get the ids of categories
@@ -87,6 +85,7 @@ for item in temp['items']:
 
 
 ```python
+'''For each category, get playlists'''
 
 playlists = {}
 for cat_id in cat_ids:
@@ -195,6 +194,7 @@ def get_track_audio_features(spotify_ids = get_track_ids()):
 
 ```python
 import time
+
 def get_playlist_data(playlist_ids):
     '''
     Given a list of Spotify playlist IDs, returns a dataframe containing a row
@@ -271,7 +271,9 @@ for cat, playlists in playlist_ids_by_cat.items():
 ```python
 '''
 Store all of this data. Uncomment + re-run ONLY IF YOU WANT TO OVERWRITE ALL OF THE CURRENT DATA
+
 '''
+
 
 ```
 
@@ -306,12 +308,15 @@ for cat, playlists in playlist_ids_by_cat.items():
 
 
 ```python
+'''
+Store playlist to track info
+
 
 #pickle.dump(playlist_to_tracks, open( "playlist_to_track_20171203.p", "wb" ) )
+'''
 ```
 
 
-## Merge Million Songs Database
 
 
 
@@ -374,6 +379,9 @@ with open('msd_data_20171203.p', 'wb') as f:
 
 
 ```python
+'''
+Merge all of our data together
+'''
 
 rez = {}
 for playlist, tracks in playlist_to_track.items():
@@ -473,6 +481,10 @@ with open('track_categories_20171203.p', 'wb') as f:
 
 
 ```python
+'''
+Generate fake playlists to use later (we will choose among these fake playlists to pick one that theoretically
+would have the most followers
+'''
 
 with open('track_categories_20171203.p', 'rb') as f:
     track_categories = pd.Series(pickle.load(f))
@@ -497,6 +509,8 @@ candidate_playlists = pd.DataFrame(candidate_playlists).T
 
 
 ```python
+'''Store fake playlists'''
+
 with open('candidate_playlists_to_songs_20171205.p', 'wb') as f:
     pickle.dump(playlist_id_to_songs, f)
 with open('candidate_playlists_20171205.p', 'wb') as f:

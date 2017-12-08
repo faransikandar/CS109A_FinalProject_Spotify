@@ -1,14 +1,12 @@
 ---
-title: Classification Models
+title: Classification Within Categories
 notebook: Classification_Models.ipynb
-nav_include: 3
 ---
 
 ## Contents
 {:.no_toc}
 *  
 {: toc}
-
 
 
 
@@ -36,12 +34,11 @@ import collections
 ```
 
 
-## Data Imputation and Dummy Creation
 
 
 
 ```python
-#Read in our cleaned, aggregated data
+'''Read in our cleaned, aggregated data'''
 plt.style.use('seaborn')
 with open('aggregate_data.p', 'rb') as f:
     data = pickle.load(f)
@@ -83,7 +80,7 @@ test = data.loc[~msk, :]
 
 
 ```python
-#We take a look at our new training dataset
+'''We take a peek at our new training dataset'''
 train.head()
 ```
 
@@ -260,12 +257,11 @@ train.head()
 
 
 
-## Create Classification Quintiles
 
 
 
 ```python
-#We split our dependent var into quantiles for classification. We chose to use quintiles.
+'''We split our dependent var into quantiles for classification. We chose to use quintiles.'''
 data['num_followers_quantile'] = pd.qcut(data['num_followers'], 5, labels=False)
 quantiles = data['num_followers_quantile']
 
@@ -282,12 +278,11 @@ y_test_class_by_cat = raw_data.groupby('category')['num_followers'].apply(lambda
 ```
 
 
-## Standardize
 
 
 
 ```python
-#Standardize numeric features
+'''Standardize numeric features'''
 to_x_train = train[[x for x in train.columns if x != 'num_followers']]
 to_x_test = test[[x for x in test.columns if x != 'num_followers']]
 
@@ -321,7 +316,7 @@ x_test_class = sm.tools.add_constant(x_test_std3, has_constant = 'add')
 
 
 ```python
-#calculate classification accuracy
+'''calculate classification accuracy'''
 def calculate_cr(classifications, y):
     correct = classifications == y
     cr = correct.sum()/len(correct)
@@ -329,13 +324,12 @@ def calculate_cr(classifications, y):
 ```
 
 
-## Baseline Model
 
 
 
 ```python
-#Begin with logistic models as baseline
-#Multinomial Logistic
+'''Begin with logistic models as baseline
+Multinomial Logistic'''
 logistic_regression_mn = LogisticRegressionCV(Cs=10, multi_class='multinomial').fit(x_train_class, y_train_class)
 logistic_classifications_train_mn = logistic_regression_mn.predict(x_train_class)
 logistic_classifications_test_mn = logistic_regression_mn.predict(x_test_class)
@@ -364,13 +358,12 @@ print("\tTest CR:", str(calculate_cr(logistic_classifications_test_ovr, y_test_c
     	Test CR: 0.363888888889
 
 
-## Additional Models - Across Categories
-### Decision Tree
+## Decision Tree
 
 
 
 ```python
-#Decision Tree with CV to pick max depth
+'''Decision Tree with CV to pick max depth'''
 param_grid = {'max_depth' : range(1,30)}
 clf = GridSearchCV(DecisionTreeClassifier(), param_grid = param_grid, cv = 5, refit = True)
 clf.fit(x_train_class, y_train_class)
@@ -386,11 +379,12 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class)*
     Test Accuracy: 34.72%
 
 
-### Random Forest
+## Random Forest
 
 
 
 ```python
+'''Random Forest with CV to pick max depth and Number of Trees'''
 param_grid = {'n_estimators' : [2**i for i in [1,2,3,4,5,6,7,8, 9, 10]],
               'max_depth' : [1,2,3,4,5,6,7,8]}
 clf = GridSearchCV(RandomForestClassifier(), param_grid = param_grid, cv = 5, refit = True, n_jobs = 4)
@@ -411,6 +405,7 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class)*
 
 
 ```python
+''' Top 10 most important features based on RF (as expected, popularity is important)'''
 feature_importance = pd.Series(clf.best_estimator_.feature_importances_, index = x_train_class.columns)
 feature_importance.sort_values(ascending = False).head(10).sort_values(ascending = True).plot('barh')
 ```
@@ -424,15 +419,15 @@ feature_importance.sort_values(ascending = False).head(10).sort_values(ascending
 
 
 
-![png](Classification_Models_files/Classification_Models_16_1.png)
+![png](Classification_Models_files/Classification_Models_15_1.png)
 
 
-### AdaBoosted Decision Trees
+## AdaBoosted Decision Trees
 
 
 
 ```python
-#AdaBoost with CV to pick max depth and number of trees
+'''AdaBoost with CV to pick max depth and number of trees'''
 learning_rate = .05
 
 param_grid = {'n_estimators' : [2**i for i in [1,2,3,4,5,6,7,8]],
@@ -455,9 +450,10 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class)*
 
 
 ```python
+'''This shows similar results for popularity being important'''
 feature_importance = pd.Series(clf.best_estimator_.feature_importances_, index = x_train_class.columns)
 feature_importance.sort_values(ascending = False).head(10).sort_values(ascending = True).plot('barh')
-#This shows similar results for popularity being important
+
 ```
 
 
@@ -469,15 +465,15 @@ feature_importance.sort_values(ascending = False).head(10).sort_values(ascending
 
 
 
-![png](Classification_Models_files/Classification_Models_19_1.png)
+![png](Classification_Models_files/Classification_Models_18_1.png)
 
 
-## Classification Within Categories
-### Decision Tree
+## Decision Tree
 
 
 
 ```python
+'''Decision Tree with CV to pick max depth'''
 param_grid = {'max_depth' : range(1,30)}
 clf = GridSearchCV(DecisionTreeClassifier(), param_grid = param_grid, cv = 5, refit = True)
 clf.fit(x_train_class, y_train_class_by_cat)
@@ -492,11 +488,12 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class_b
     Test Accuracy: 46.94%
 
 
-### Random Forest
+## Random Forest
 
 
 
 ```python
+'''Random Forest with CV to pick max depth and number of trees'''
 param_grid = {'n_estimators' : [2**i for i in [1,2,3,4,5,6,7,8, 9, 10]],
               'max_depth' : [1,2,3,4,5,6,7,8]}
 clf = GridSearchCV(RandomForestClassifier(), param_grid = param_grid, cv = 5, refit = True, n_jobs = 4)
@@ -514,12 +511,12 @@ print('Test Accuracy: {x}%'.format(x = str(clf.score(x_test_class,y_test_class_b
     Test Accuracy: 45.27%
 
 
-### AdaBoosted Decision Tree
+## AdaBoosted Decision Tree
 
 
 
 ```python
-#AdaBoost with CV to pick max depth and number of trees
+'''AdaBoost with CV to pick max depth and number of trees'''
 learning_rate = .05
 param_grid = {'n_estimators' : [2**i for i in [1,2,3,4,5,6,7,8]],
               'base_estimator__max_depth' : [1,2,3,4,5,6,7,8, 9, 10, 11, 12]}

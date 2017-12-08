@@ -1,6 +1,7 @@
 ---
-title: Draw the heatmap with the mask and correct aspect ratio
+title: EDA
 notebook: EDA.ipynb
+nav_include: 2
 ---
 
 ## Contents

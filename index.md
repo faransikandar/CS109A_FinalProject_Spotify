@@ -11,7 +11,7 @@ title: The Quest for the Perfect Playlist
 
 - [Section 1. Problem Statement and Motivation:](#section-1-problem-statement-and-motivation)
 - [Section 2. Introduction and Description of Data:](#section-2-introduction-and-description-of-data)
-- [Section 3. Literature Review/Related Work:](#3-literature-reviewrelated-work)
+- [Section 3. Literature Review/Related Work:](#section-3-literature-reviewrelated-work)
 - [Section 4. Modeling Approach and Project Trajectory:](#section-4-modeling-approach-and-project-trajectory)
    * [Baseline Models](#baseline-models)
    * [Feature Selection](#feature-selection)

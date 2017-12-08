@@ -1,6 +1,7 @@
 ---
-title: Uncomment and run if you want to store again
+title: Data Retrieval
 notebook: Data_Retrieval.ipynb
+nav_include: 1
 ---
 
 ## Contents

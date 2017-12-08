@@ -16,7 +16,7 @@ We started by gathering playlist information for all of Spotify’s “official�
 
 Our preliminary EDA shows that the distribution of the number of followers of a playlist is very skewed: few playlists have an extremely high number of followers, while many more have a medium to low number of followers.
 
-<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/histogram.png?raw=true" width="425" />
+<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/histogram.png?raw=true" width="450" />
 <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/boxplot.png?raw=true" width="400"/>
 
 To handle this, we chose to re-define our dependent variable (number of followers) in two ways: (a) for our regression models, we took the natural log of the number of followers and (b) for our classification models, we used quantiles of the number of followers. We also did this by category, since our EDA showed that there were differences by category:
@@ -25,7 +25,8 @@ To handle this, we chose to re-define our dependent variable (number of follower
    <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png?raw=true" />    
 </p>
 
-<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png?raw=true" /> | <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/pop_by_cat.png?raw=true" />
+<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png?raw=true" /> 
+<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/pop_by_cat.png?raw=true" />
 
 Our EDA also showed that specific features were highly correlated with number of followers, namely, the popularity of individual songs on the playlist, mean danceability, and whether or not the playlist was featured. 
 

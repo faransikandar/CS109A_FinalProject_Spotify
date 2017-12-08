@@ -1,6 +1,7 @@
 ---
-title: Classification Within Categories
+title: Classification Models
 notebook: Classification_Models.ipynb
+nav_include: 3
 ---
 
 ## Contents

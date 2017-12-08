@@ -7,21 +7,29 @@ title: The Quest for the Perfect Playlist
 
 <a href="https://github.com/fsikandar/CS109A_FinalProject_Spotify">**Github Repo**</a>
 
-<img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="100" />
+<div class="row">
+ 
+  <div class="column">
+    - [Section 1. Problem Statement and Motivation:](#Section 1-problem-statement-and-motivation)
+    - [Section 2. Introduction and Description of Data:](#Section 2-introduction-and-description-of-data)
+    - [Section 3. Literature Review/Related Work:](#Section 3-literature-review-related-work)
+    - [Section 4. Modeling Approach and Project Trajectory:](#Section 4-modeling-approach-and-project-trajectory)
+      * [Baseline Models](#baseline-models)
+      * [Feature Selection](#feature-selection)
+      * [Additional Models](#additional-models)
+      * [Playlist Generation](#playlist-generation)
+    - [Section 5. Results, Conclusions, and Future Work:](#5-results-conclusions-and-future-work)
+      * [Conclusions](#conclusions)
+      * [Strengths](#strengths)
+      * [Weaknesses](#weaknesses)
+      * [Further Research](#further-research)
+  </div>
+ 
+  <div class="column">
+    <img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="100" />
+  </div>
 
-- [Section 1. Problem Statement and Motivation:](#Section 1-problem-statement-and-motivation)
-- [Section 2. Introduction and Description of Data:](#Section 2-introduction-and-description-of-data)
-- [Section 3. Literature Review/Related Work:](#Section 3-literature-review-related-work)
-- [Section 4. Modeling Approach and Project Trajectory:](#Section 4-modeling-approach-and-project-trajectory)
-  * [Baseline Models](#baseline-models)
-  * [Feature Selection](#feature-selection)
-  * [Additional Models](#additional-models)
-  * [Playlist Generation](#playlist-generation)
-- [Section 5. Results, Conclusions, and Future Work:](#5-results-conclusions-and-future-work)
-  * [Conclusions](#conclusions)
-  * [Strengths](#strengths)
-  * [Weaknesses](#weaknesses)
-  * [Further Research](#further-research)
+</div>
 
 ## Section 1. Problem Statement and Motivation:
 

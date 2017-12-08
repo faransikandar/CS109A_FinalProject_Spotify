@@ -1,8 +1,6 @@
----
-title: Spotify - CS109A Final Project - Group 14
----
-
+# The Search for the Perfect Playlist
 ## By David Costigan, Layla O'Kane and Faran Sikandar
+## Spotify - CS109A Final Project - Group 14
 
 <img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="100" />
 

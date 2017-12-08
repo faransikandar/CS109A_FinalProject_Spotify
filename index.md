@@ -145,24 +145,13 @@ However, our analysis does have some weaknesses. The most obvious one is that ou
 
 Playlist prediction and analysis is an enormous topic; while carrying out this project, we considered other questions that could be answered with further research:
 
-<ul style="font-weight: bold">
+<ul>
   <li>How does track order influence the popularity of a playlist (i.e., conditional on having the same songs in a playlist, does order matter?)</li>
   <li>Do limitations in Spotify’s catalogue prevent some playlists from being more popular than they otherwise could be (e.g., Taylor Swift only recently allowed her music to be streamed on Spotify—does this matter)?</li>
   <li>How does the popularity of a playlist evolve over time?</li>
   <li>Can we create a model to modify existing playlists to make them more popular (given an existing playlist, how would you tweak a playlist to make it more popular?)?</li>
 </ul>
 
-
-## Lets have fun
-
->here is a quote
-
-Here is *emph* and **bold**.
-
-Here is some inline math $\alpha = \frac{\beta}{\gamma}$ and, of-course, E rules:
-
-$$ G_{\mu\nu} + \Lambda g_{\mu\nu}  = 8 \pi T_{\mu\nu} . $$
-
-![alt text](https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png "Spotify Hover")
+**Thanks From the Team!**
 
 ![Group 14](https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/Group14.png?raw=true")

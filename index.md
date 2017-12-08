@@ -89,42 +89,9 @@ We additionally modeled the number of followers by category using a classificati
 
 Our final step was to generate a highly-followed playlist. To do this, we classified songs into categories based on the playlists containing them (e.g., if “Crazy in Love” by Beyoncé was included most frequently on “Party” playlists, we classified it as a “Party” song). We then generated playlists (each with 30 songs overall) in each category by randomly choosing songs within the category. We generated 100 playlists in each category (across all 33 unique categories, this leads to 3,300 playlists overall). We then fit our LASSO regression model on these playlists and chose the one that had the highest predicted number of followers. Our best playlist was a dance/party playlist. This aligns with the fact that the most popular songs (on average) were in the Party category based on our EDA (and our regression model put a lot of weight on popularity factors when predicting how many followers a playlist will have, which makes sense).
 
-Below is our randomly generated playlist predicted to be most popular:
+Below is our randomly generated playlist predicted to be most popular. Click below to play it for yourself!
 
-**The Best Playlist!**
-**Artist**|**Song Name**
-:-----:|:-----:
-Las Ketchup|The Ketchup Song (Asereje) - Spanish Version
-Baby K|Roma - Bangkok
-Beyoncé|Crazy In Love
-Calvin Harris|This Is What You Came For
-Jack Ü|Take Ü There (feat. Kiesza) - Missy Elliott Re...
-Maze|Before I Let Go (feat. Frankie Beverly)
-Hercules & Love Affair|I Try To Talk To You
-Big Gigantic|Good Times Roll
-Lyfe Jennings|Must Be Nice
-Mary J. Blige|Be Without You
-Zara Larsson|Ain't My Fault
-Major Lazer|Watch out for This (Bumaye)
-French Montana|Unforgettable
-Tony! Toni! Toné!|Feels Good
-SWV|Right Here - Human Nature Radio Mix
-Zhané|Hey Mr. DJ
-Sound Of Legend|Blue (Da Ba Dee) - Sound of Legend Version Edit
-Nick Jonas|Remember I Told You
-50 Cent|In Da Club
-Stevie Wonder|All I Do
-Jess Glynne|Hold My Hand
-Prince Royce|My Angel
-DJ Khaled|I'm the One
-Sam Sparro|Hands Up
-Marcus Schössow|Zulu - Radio Edit
-Fifth Harmony|Down
-Fruko Y Sus Tesos|El Preso
-Alesso|Cool
-RedOne|Don't You Need Somebody (feat. Enrique Iglesias)
-Naughty Boy|La La La
-
+<iframe src="https://open.spotify.com/embed/user/laylaokane/playlist/3CGThzfeDmjRTFuqo7a1f0&theme=white" width="400" height="380" frameborder="0" allowtransparency="true"></iframe>
 
 
 ## 5. Results, Conclusions, and Future Work:

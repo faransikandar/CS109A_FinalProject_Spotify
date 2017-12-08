@@ -4,12 +4,8 @@ title: The Quest for the Perfect Playlist
 
 ### By David Costigan, Layla O'Kane and Faran Sikandar
 #### Spotify - CS109A Final Project - Group 14
-#### Github Repo:
 
 <a href="https://github.com/fsikandar/CS109A_FinalProject_Spotify">**Github Repo**</a>
- 
-Click <a href="http://www.yahoo.com">here</a> to go to yahoo.
-
 
 <img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="100" />
 

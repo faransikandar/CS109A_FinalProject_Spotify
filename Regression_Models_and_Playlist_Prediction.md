@@ -1,6 +1,7 @@
 ---
-title: Drumroll: The Best Playlist!
+title: Drumroll: Regression Models + The Best Playlist!
 notebook: Regression_Models_and_Playlist_Prediction.ipynb
+nav_include: 4
 ---
 
 ## Contents

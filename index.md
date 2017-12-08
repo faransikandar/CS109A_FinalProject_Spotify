@@ -9,15 +9,15 @@ title: The Quest for the Perfect Playlist
 
 <img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="100" />
 
-- [Section 1. Problem Statement and Motivation:](#Section 1.-problem-statement-and-motivation)
-- [Section 2. Introduction and Description of Data:](#Section 2.-introduction-and-description-of-data)
-- [Section 3. Literature Review/Related Work:](#Section 3.-literature-review-related-work)
-- [Section 4. Modeling Approach and Project Trajectory:](#Section 4-modeling-approach-and-project-trajectory)
+- [Section 1. Problem Statement and Motivation:](#section-1.-problem-statement-and-motivation)
+- [Section 2. Introduction and Description of Data:](#section-2.-introduction-and-description-of-data)
+- [Section 3. Literature Review/Related Work:](#section-3.-literature-review-related-work)
+- [Section 4. Modeling Approach and Project Trajectory:](#Section-4-modeling-approach-and-project-trajectory)
    * [Baseline Models](#baseline-models)
    * [Feature Selection](#feature-selection)
    * [Additional Models](#additional-models)
    * [Playlist Generation](#playlist-generation)
-- [Section 5. Results, Conclusions, and Future Work:](#Section 5.-results-conclusions-and-future-work)
+- [Section 5. Results, Conclusions, and Future Work:](#section-5.-results-conclusions-and-future-work)
    * [Conclusions](#conclusions)
    * [Strengths](#strengths)
    * [Weaknesses](#weaknesses)

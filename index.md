@@ -1,4 +1,3 @@
-# The Search for the Perfect Playlist
 ## By David Costigan, Layla O'Kane and Faran Sikandar
 ## Spotify - CS109A Final Project - Group 14
 

@@ -14,10 +14,10 @@ Final Report:
 index.md
 
 Notebook Markdowns:  
-Data_Retrieval.md  
-eda.md  
-Regression_Models_and_Playlist_Prediction.md  
-Classification_Models.md  
+Data_Retrieval.md
+EDA.md  (with files folders with images)
+Regression_Models_and_Playlist_Prediction.md (with files folders with images)
+Classification_Models.md (with files folders with images)
 
 ## Code/Notebooks
 Contained in "notebooks" folder

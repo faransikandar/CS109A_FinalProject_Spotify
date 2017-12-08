@@ -10,7 +10,6 @@ notebook: EDA.ipynb
 
 
 
-
 ```python
 import pickle
 import seaborn as sns
@@ -26,7 +25,6 @@ plt.style.use('seaborn')
 ```
 
 
-## Spotify API Data
 
 
 
@@ -49,7 +47,7 @@ avgs = train.groupby('category').mean()
 ```
 
 
-### What Playlist categories tend to have the most followers?
+## What Playlist categories tend to have the most followers?
 
 
 
@@ -58,23 +56,15 @@ pd.Series(avgs['num_followers']).sort_values(ascending = False).plot(kind = 'bar
 plt.xlabel('Spotify Playlist Category', fontsize = 20)
 plt.ylabel('Average Number of Followers', fontsize = 20)
 plt.title('Average Number of Playlist Followers by Spotify Playlist Category', fontsize = 20)
-
-len(set(data['category'].values))
+plt.show()
 ```
 
 
 
+![png](EDA_files/EDA_4_0.png)
 
 
-    33
-
-
-
-
-![png](EDA_files/EDA_5_1.png)
-
-
-### What does the distribution of the number of followers look like?
+## What does the distribution of the number of followers look like?
 
 
 
@@ -98,14 +88,14 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_7_0.png)
+![png](EDA_files/EDA_6_0.png)
 
 
 
-![png](EDA_files/EDA_7_1.png)
+![png](EDA_files/EDA_6_1.png)
 
 
-### Which categories tend to have the most popular songs?
+## Which categories tend to have the most popular songs?
 
 
 
@@ -118,22 +108,15 @@ avgs['popularity_mean'].sort_values(ascending = False).plot(kind = 'bar')
 plt.xlabel('Spotify Playlist Category', fontsize = 20)
 plt.ylabel('Average Popularity of Songs', fontsize = 20)
 plt.title('Average Popularity of Songs by Spotify Playlist Category', fontsize = 20)
-
+plt.show()
 ```
 
 
 
+![png](EDA_files/EDA_8_0.png)
 
 
-    <matplotlib.text.Text at 0x21a0e1590f0>
-
-
-
-
-![png](EDA_files/EDA_9_1.png)
-
-
-### How are our quantitative variables correlated?
+## How are our quantitative variables correlated?
 
 
 
@@ -164,11 +147,10 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_11_0.png)
+![png](EDA_files/EDA_10_0.png)
 
 
-## Million Songs Data
-### Artist Familiarity
+## Artist Familiarity
 
 
 
@@ -183,10 +165,10 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_13_0.png)
+![png](EDA_files/EDA_12_0.png)
 
 
-### Artist Hotttnesss
+## Artist Hotttnesss
 
 
 
@@ -201,10 +183,10 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_15_0.png)
+![png](EDA_files/EDA_14_0.png)
 
 
-### Song Hotttnesss
+## Song Hotttnesss
 
 
 
@@ -219,10 +201,10 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_17_0.png)
+![png](EDA_files/EDA_16_0.png)
 
 
-### Song Popularity Compared to Hotttnesss
+## Song Popularity Compared to Hotttnesss
 
 
 
@@ -236,12 +218,5 @@ plt.show()
 
 
 
-![png](EDA_files/EDA_19_0.png)
-
-
-
-
-```python
-
-```
+![png](EDA_files/EDA_18_0.png)
 

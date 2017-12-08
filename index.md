@@ -91,7 +91,7 @@ Our final step was to generate a highly-followed playlist. To do this, we classi
 
 Below is our randomly generated playlist predicted to be most popular. Click below to play it for yourself!
 
-<iframe src="https://open.spotify.com/embed/user/laylaokane/playlist/3CGThzfeDmjRTFuqo7a1f0&theme=white" width="400" height="380" frameborder="0" allowtransparency="true"></iframe>
+<iframe src="https://open.spotify.com/embed/user/laylaokane/playlist/3CGThzfeDmjRTFuqo7a1f0&#038;theme=white" width="800" height="400" frameborder="0" allowtransparency="true"></iframe>
 
 
 ## 5. Results, Conclusions, and Future Work:

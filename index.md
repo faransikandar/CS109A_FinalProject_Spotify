@@ -23,18 +23,20 @@ To handle this, we chose to re-define our dependent variable (number of follower
 
 <p align="center">
    <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png?raw=true" />    
+   <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/pop_by_cat.png?raw=true" />
 </p>
-
-<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/followers_by_cat.png?raw=true" /> 
-<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/pop_by_cat.png?raw=true" />
 
 Our EDA also showed that specific features were highly correlated with number of followers, namely, the popularity of individual songs on the playlist, mean danceability, and whether or not the playlist was featured. 
 
-<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/correls.png?raw=true" />
+<p align="center">
+   <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/correls.png?raw=true" />
+</p>
 
 We also looked to see how additional data from the Million Songs Database was correlated with number of followers. This showed that, for example, song hotttnesss, a different measure of popularity, was (unsurprisingly) correlated with number of followers:
 
-<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/song_hotttnesss_v_followers.png?raw=true" />
+<p align="center">
+   <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/song_hotttnesss_v_followers.png?raw=true" />
+</p>
 
 In order to understand playlists better, and based on our EDA, we chose to predict overall followers as well as followers by category (which is very similar to genre).
 
@@ -69,7 +71,9 @@ After selecting our features, we ran additional models for our regression and cl
 
 Our LASSO regression model had a train R^2 of 49%, a cross validation R^2 of 34.3%, and a test R^2 of 32.4%. Visually, our predictions for the log number of followers tend to match up fairly well with the actual number of followers in our test set, indicating that our model fits reasonably well:
 
-<img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/lasso_test_visualization.png?raw=true" />
+<p align="center">
+   <img src="https://github.com/fsikandar/CS109A_FinalProject_Spotify/blob/master/images/lasso_test_visualization.png?raw=true" />
+</p>
 
 For classification, the AdaBoost model’s cross-validation accuracy was 42.81%, and the test accuracy was 35.83%. Note that we were classifying songs based on quintile, so we’d expect to have a classification accuracy of only 20% if our model were classifying randomly. Thus, our model appears to be doing a reasonably good job.
 
@@ -81,8 +85,9 @@ Our final step was to generate a highly-followed playlist. To do this, we classi
 
 Below is our randomly generated playlist predicted to be most popular. Click below to play it for yourself!
 
-<iframe src="https://open.spotify.com/embed?uri=spotify:user:laylaokane:playlist:3CGThzfeDmjRTFuqo7a1f0&theme=white" width="800" height="400" frameborder="0" allowtransparency="true"></iframe>
-
+<p align="center">
+   <iframe src="https://open.spotify.com/embed?uri=spotify:user:laylaokane:playlist:3CGThzfeDmjRTFuqo7a1f0&theme=white" width="800" height="400" frameborder="0" allowtransparency="true"></iframe>
+</p>
 
 ## 5. Results, Conclusions, and Future Work:
 

@@ -5,30 +5,34 @@ title: The Quest for the Perfect Playlist
 ### By David Costigan, Layla O'Kane and Faran Sikandar
 #### Spotify - CS109A Final Project - Group 14
 #### Github Repo:
-https://github.com/fsikandar/CS109A_FinalProject_Spotify
+
+<a href="https://github.com/fsikandar/CS109A_FinalProject_Spotify">**Github Repo**</a>
+ 
+Click <a href="http://www.yahoo.com">here</a> to go to yahoo.
+
 
 <img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="100" />
 
-- [1. Problem Statement and Motivation:](#1-problem-statement-and-motivation)
-- [2. Introduction and Description of Data:](#2-introduction-and-description-of-data)
-- [3. Literature Review/Related Work:](#3-literature-review-related-work)
-- [4. Modeling Approach and Project Trajectory:](#4-modeling-approach-and-project-trajectory)
+- [Section 1. Problem Statement and Motivation:](#1-problem-statement-and-motivation)
+- [Section 2. Introduction and Description of Data:](#2-introduction-and-description-of-data)
+- [Section 3. Literature Review/Related Work:](#3-literature-review-related-work)
+- [Section 4. Modeling Approach and Project Trajectory:](#4-modeling-approach-and-project-trajectory)
   * [Baseline Models](#baseline-models)
   * [Feature Selection](#feature-selection)
   * [Additional Models](#additional-models)
   * [Playlist Generation](#playlist-generation)
-- [5. Results, Conclusions, and Future Work:](#5-results-conclusions-and-future-work)
+- [Section 5. Results, Conclusions, and Future Work:](#5-results-conclusions-and-future-work)
   * [Conclusions](#conclusions)
   * [Strengths](#strengths)
   * [Weaknesses](#weaknesses)
   * [Further Research](#further-research)
 
-## 1. Problem Statement and Motivation:
+## Section 1. Problem Statement and Motivation:
 
 The project goal is to assess what features of a playlist on Spotify are good predictors of the number of followers of that playlist. We model this using both regression and classification methods, and using both playlist and song-level data. We then use the results to generate what is likely to be a successful playlist. This project will help inform Spotify about its users’ preferences for playlists, enabling it to create more successful playlists.
 
 
-## 2. Introduction and Description of Data:
+## Section 2. Introduction and Description of Data:
 
 We are working to understand how Spotify generates commercial success through its use of licensed music, and, more specifically, its playlists. Understanding what makes a playlist popular can help us understand how Spotify's digital rights management and its "freemium" business model has led to business success and profitability. Spotify and other similar streaming services have raised questions of how intellectual property rights affect innovation in the age rapid improvements in digital technology. This project contributes to the literature on these issues.
 
@@ -61,7 +65,7 @@ We also looked to see how additional data from the Million Songs Database was co
 In order to understand playlists better, and based on our EDA, we chose to predict overall followers as well as followers by category (which is very similar to genre).
 
 
-## 3. Literature Review/Related Work:
+## Section 3. Literature Review/Related Work:
 
 In our work on this project, we have consulted the following resources:
 
@@ -73,7 +77,7 @@ In our work on this project, we have consulted the following resources:
 - Lamere, Paul. Spotipy: A Light Weight Python Library for the Spotify Web API. Python, 2017. https://github.com/plamere/spotipy.
 - Spotify Capstone GitHub. Jupyter Notebook. 2017. Reprint, spotify-iacs, 2017. https://github.com/spotify-iacs/capstone.
 
-## 4. Modeling Approach and Project Trajectory: 
+## Section 4. Modeling Approach and Project Trajectory: 
 
 ### Baseline Models
 
@@ -109,7 +113,7 @@ Below is our randomly generated playlist predicted to be most popular. Click bel
    <iframe src="https://open.spotify.com/embed?uri=spotify:user:laylaokane:playlist:3CGThzfeDmjRTFuqo7a1f0&theme=white" width="800" height="400" frameborder="0" allowtransparency="true"></iframe>
 </p>
 
-## 5. Results, Conclusions, and Future Work:
+## Section 5. Results, Conclusions, and Future Work:
 
 ### Conclusions
 

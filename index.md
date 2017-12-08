@@ -1,5 +1,24 @@
-## By David Costigan, Layla O'Kane and Faran Sikandar
-## Spotify - CS109A Final Project - Group 14
+
+---
+The Quest for the Perfect Playlist
+---
+
+### By David Costigan, Layla O'Kane and Faran Sikandar
+#### Spotify - CS109A Final Project - Group 14
+
+- [1. Problem Statement and Motivation:](#1-problem-statement-and-motivation-)
+- [2. Introduction and Description of Data:](#2-introduction-and-description-of-data-)
+- [3. Literature Review/Related Work:](#3-literature-review-related-work-)
+- [4. Modeling Approach and Project Trajectory:](#4-modeling-approach-and-project-trajectory-)
+  * [Baseline Models](#baseline-models)
+  * [Feature Selection](#feature-selection)
+  * [Additional Models](#additional-models)
+  * [Playlist Generation](#playlist-generation)
+- [5. Results, Conclusions, and Future Work:](#5-results--conclusions--and-future-work-)
+  * [Conclusions](#conclusions)
+  * [Strengths](#strengths)
+  * [Weaknesses](#weaknesses)
+  * [Further Research](#further-research)
 
 <img src="https://www.shareicon.net/data/512x512/2017/02/01/877519_media_512x512.png" width="100" height="100" />
 

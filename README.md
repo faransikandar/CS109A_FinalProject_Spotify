@@ -10,10 +10,10 @@ Project Website: https://fsikandar.github.io/CS109A_FinalProject_Spotify/
 
 ## Markdown Files
 
-Final Report: 
+Final Report:  
 index.md
 
-Notebook Markdowns:
+Notebook Markdowns:  
 Data_Retrieval.md  
 eda.md  
 Regression_Models_and_Playlist_Prediction.md  

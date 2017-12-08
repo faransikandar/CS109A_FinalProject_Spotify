@@ -89,7 +89,9 @@ We additionally modeled the number of followers by category using a classificati
 
 Our final step was to generate a highly-followed playlist. To do this, we classified songs into categories based on the playlists containing them (e.g., if “Crazy in Love” by Beyoncé was included most frequently on “Party” playlists, we classified it as a “Party” song). We then generated playlists (each with 30 songs overall) in each category by randomly choosing songs within the category. We generated 100 playlists in each category (across all 33 unique categories, this leads to 3,300 playlists overall). We then fit our LASSO regression model on these playlists and chose the one that had the highest predicted number of followers. Our best playlist was a dance/party playlist. This aligns with the fact that the most popular songs (on average) were in the Party category based on our EDA (and our regression model put a lot of weight on popularity factors when predicting how many followers a playlist will have, which makes sense).
 
-Below is our randomly generated playlist predicted to be most popular:
+Below is our randomly generated playlist predicted to be most popular. Click below to play it for yourself!
+
+<iframe src="https://open.spotify.com/embed/user/laylaokane/playlist/3CGThzfeDmjRTFuqo7a1f0" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
 **The Best Playlist!**
 **Artist**|**Song Name**

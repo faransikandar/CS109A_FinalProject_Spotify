@@ -6,9 +6,9 @@ This is the GitHub for our Spotify Final Project.
 
 Project Website: https://fsikandar.github.io/CS109A_FinalProject_Spotify/
 
-## Repository Structure
+# Repository Structure
 
-# Markdown Files
+## Markdown Files
 
 Final Report: 
 index.md
@@ -19,11 +19,11 @@ eda.md
 Regression_Models_and_Playlist_Prediction.md
 Classification_Models.md
 
-# Code/Notebooks
+## Code/Notebooks
 Contained in "notebooks" folder
 
-# Data
+## Data
 Contained in "data" folder
 
-# Images
+## Images
 Contained in "images" folder

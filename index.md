@@ -1,4 +1,3 @@
-
 ---
 title: The Quest for the Perfect Playlist
 ---
@@ -15,7 +14,7 @@ title: The Quest for the Perfect Playlist
   * [Feature Selection](#feature-selection)
   * [Additional Models](#additional-models)
   * [Playlist Generation](#playlist-generation)
-- [5. Results, Conclusions, and Future Work:](#5-results--conclusions--and-future-work)
+- [5. Results, Conclusions, and Future Work:](#5-results-conclusions-and-future-work)
   * [Conclusions](#conclusions)
   * [Strengths](#strengths)
   * [Weaknesses](#weaknesses)

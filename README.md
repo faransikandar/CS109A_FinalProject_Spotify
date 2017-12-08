@@ -11,13 +11,13 @@ Project Website: https://fsikandar.github.io/CS109A_FinalProject_Spotify/
 ## Markdown Files
 
 Final Report:  
-index.md
+- index.md
 
 Notebook Markdowns:  
-Data_Retrieval.md
-EDA.md  (with files folders with images)
-Regression_Models_and_Playlist_Prediction.md (with files folders with images)
-Classification_Models.md (with files folders with images)
+- Data_Retrieval.md
+- EDA.md  (with files folders with images)
+- Regression_Models_and_Playlist_Prediction.md (with files folders with images)
+- Classification_Models.md (with files folders with images)
 
 ## Code/Notebooks
 Contained in "notebooks" folder

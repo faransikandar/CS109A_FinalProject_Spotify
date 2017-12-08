@@ -1,4 +1,4 @@
-theme: jekyll-theme-primer
+theme: jekyll-theme-minimal
 title: Spotify Project
 description: Predicting the Perfect Playlist!
 baseurl:

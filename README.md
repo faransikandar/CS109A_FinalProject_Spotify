@@ -4,7 +4,7 @@
 
 This is the GitHub for our Spotify Final Project.
 
-Project Website: https://fsikandar.github.io/CS109A_FinalProject_Spotify/
+Project Website: https://faransikandar.github.io/CS109A_FinalProject_Spotify/
 
 # Repository Structure
 
